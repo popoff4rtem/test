@@ -1,0 +1,929 @@
+/********************************************************************************
+* 
+* McStas, neutron ray-tracing package
+*         Copyright (C) 1997-2008, All rights reserved
+*         Risoe National Laboratory, Roskilde, Denmark
+*         Institut Laue Langevin, Grenoble, France
+* 
+* This file was written by McStasScript, which is a 
+* python based McStas instrument generator written by 
+* Mads Bertelsen in 2019 while employed at the 
+* European Spallation Source Data Management and 
+* Software Centre
+* 
+* Instrument ellpced_scripts_1
+* 
+* %Identification
+* Written by: Python McStas Instrument Generator
+* Date: 14:53:41 on July 14, 2023
+* Origin: ESS DMSC
+* %INSTRUMENT_SITE: Generated_instruments
+* 
+* 
+* %Parameters
+* 
+* %End 
+********************************************************************************/
+
+DEFINE INSTRUMENT ellpced_scripts_1 (
+)
+
+DECLARE 
+%{
+%}
+
+INITIALIZE 
+%{
+// Start of initialize for generated ellpced_scripts_1
+%}
+
+TRACE 
+COMPONENT origin = Progress_bar()
+AT (0, 0, 0) ABSOLUTE
+
+COMPONENT source = Source_gen(
+ dist = 0.1, focus_xw = 0.01,
+ focus_yh = 0.06, lambda0 = 5,
+ dlambda = 4.005, I1 = 2.5602E+11,
+ yheight = 0.06, xwidth = 0.04,
+ T1 = 111.69, T2 = 323.18,
+ I2 = 1.11E+11, T3 = 38.48,
+ I3 = 2.6156E+11)
+AT (0,0,0) RELATIVE PREVIOUS
+
+COMPONENT monitor_dxy_in = Monitor_nD(
+ xwidth = 0.01, yheight = 0.06,
+ options = "dx limits=[-10 10] bins=50 dy limits=[-10 10] bins=50")
+AT (0, 0, 0.1001) RELATIVE PREVIOUS
+
+COMPONENT monitor_xy_in = Monitor_nD(
+ xwidth = 0.01, yheight = 0.06,
+ options = "x limits=[-0.01 0.01] bins=50 y limits=[-0.03 0.03] bins=50")
+AT (0, 0, 0) RELATIVE PREVIOUS
+
+COMPONENT Bender = Bender(
+ w = 0.01, h = 0.06,
+ r = 650, k = 2,
+ l = 5)
+AT (0, 0, 0) RELATIVE PREVIOUS
+
+COMPONENT monitor_out_dxy_straight = Monitor_nD(
+ xwidth = 0.01, yheight = 0.06,
+ options = "dx limits=[-5 5] bins=50 dy limits=[-5 5] bins=100")
+AT (0, 0, 5) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_0 = Guide_gravity(
+ w1 = 0.0100124, h1 = 0.06,
+ w2 = 0.010259, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_1 = Guide_gravity(
+ w1 = 0.010259, h1 = 0.06,
+ w2 = 0.0104997, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_2 = Guide_gravity(
+ w1 = 0.0104997, h1 = 0.06,
+ w2 = 0.010735, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_3 = Guide_gravity(
+ w1 = 0.010735, h1 = 0.06,
+ w2 = 0.0109652, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_4 = Guide_gravity(
+ w1 = 0.0109652, h1 = 0.06,
+ w2 = 0.0111906, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_5 = Guide_gravity(
+ w1 = 0.0111906, h1 = 0.06,
+ w2 = 0.0114115, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_6 = Guide_gravity(
+ w1 = 0.0114115, h1 = 0.06,
+ w2 = 0.0116282, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_7 = Guide_gravity(
+ w1 = 0.0116282, h1 = 0.06,
+ w2 = 0.0118408, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_8 = Guide_gravity(
+ w1 = 0.0118408, h1 = 0.06,
+ w2 = 0.0120497, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_9 = Guide_gravity(
+ w1 = 0.0120497, h1 = 0.06,
+ w2 = 0.0122549, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_10 = Guide_gravity(
+ w1 = 0.0122549, h1 = 0.06,
+ w2 = 0.0124567, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_11 = Guide_gravity(
+ w1 = 0.0124567, h1 = 0.06,
+ w2 = 0.0126552, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_12 = Guide_gravity(
+ w1 = 0.0126552, h1 = 0.06,
+ w2 = 0.0128506, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_13 = Guide_gravity(
+ w1 = 0.0128506, h1 = 0.06,
+ w2 = 0.013043, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_14 = Guide_gravity(
+ w1 = 0.013043, h1 = 0.06,
+ w2 = 0.0132326, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_15 = Guide_gravity(
+ w1 = 0.0132326, h1 = 0.06,
+ w2 = 0.0134195, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_16 = Guide_gravity(
+ w1 = 0.0134195, h1 = 0.06,
+ w2 = 0.0136037, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_17 = Guide_gravity(
+ w1 = 0.0136037, h1 = 0.06,
+ w2 = 0.0137854, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_18 = Guide_gravity(
+ w1 = 0.0137854, h1 = 0.06,
+ w2 = 0.0139648, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_19 = Guide_gravity(
+ w1 = 0.0139648, h1 = 0.06,
+ w2 = 0.0141418, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_20 = Guide_gravity(
+ w1 = 0.0141418, h1 = 0.06,
+ w2 = 0.0242506, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.00125625015624653) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_21 = Guide_gravity(
+ w1 = 0.0242506, h1 = 0.06,
+ w2 = 0.0311183, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_22 = Guide_gravity(
+ w1 = 0.0311183, h1 = 0.06,
+ w2 = 0.0366165, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_23 = Guide_gravity(
+ w1 = 0.0366165, h1 = 0.06,
+ w2 = 0.0412959, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_24 = Guide_gravity(
+ w1 = 0.0412959, h1 = 0.06,
+ w2 = 0.0454102, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_25 = Guide_gravity(
+ w1 = 0.0454102, h1 = 0.06,
+ w2 = 0.0491018, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_26 = Guide_gravity(
+ w1 = 0.0491018, h1 = 0.06,
+ w2 = 0.0524599, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_27 = Guide_gravity(
+ w1 = 0.0524599, h1 = 0.06,
+ w2 = 0.0555451, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_28 = Guide_gravity(
+ w1 = 0.0555451, h1 = 0.06,
+ w2 = 0.0584007, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_29 = Guide_gravity(
+ w1 = 0.0584007, h1 = 0.06,
+ w2 = 0.0610588, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_30 = Guide_gravity(
+ w1 = 0.0610588, h1 = 0.06,
+ w2 = 0.0635442, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_31 = Guide_gravity(
+ w1 = 0.0635442, h1 = 0.06,
+ w2 = 0.0658766, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_32 = Guide_gravity(
+ w1 = 0.0658766, h1 = 0.06,
+ w2 = 0.0680716, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_33 = Guide_gravity(
+ w1 = 0.0680716, h1 = 0.06,
+ w2 = 0.0701421, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_34 = Guide_gravity(
+ w1 = 0.0701421, h1 = 0.06,
+ w2 = 0.0720989, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_35 = Guide_gravity(
+ w1 = 0.0720989, h1 = 0.06,
+ w2 = 0.073951, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_36 = Guide_gravity(
+ w1 = 0.073951, h1 = 0.06,
+ w2 = 0.075706, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_37 = Guide_gravity(
+ w1 = 0.075706, h1 = 0.06,
+ w2 = 0.0773706, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_38 = Guide_gravity(
+ w1 = 0.0773706, h1 = 0.06,
+ w2 = 0.0789505, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_39 = Guide_gravity(
+ w1 = 0.0789505, h1 = 0.06,
+ w2 = 0.0804507, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_40 = Guide_gravity(
+ w1 = 0.0804507, h1 = 0.06,
+ w2 = 0.0818756, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_41 = Guide_gravity(
+ w1 = 0.0818756, h1 = 0.06,
+ w2 = 0.083229, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_42 = Guide_gravity(
+ w1 = 0.083229, h1 = 0.06,
+ w2 = 0.0845143, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_43 = Guide_gravity(
+ w1 = 0.0845143, h1 = 0.06,
+ w2 = 0.0857347, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_44 = Guide_gravity(
+ w1 = 0.0857347, h1 = 0.06,
+ w2 = 0.0868929, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_45 = Guide_gravity(
+ w1 = 0.0868929, h1 = 0.06,
+ w2 = 0.0879913, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_46 = Guide_gravity(
+ w1 = 0.0879913, h1 = 0.06,
+ w2 = 0.0890321, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_47 = Guide_gravity(
+ w1 = 0.0890321, h1 = 0.06,
+ w2 = 0.0900173, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_48 = Guide_gravity(
+ w1 = 0.0900173, h1 = 0.06,
+ w2 = 0.0909488, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_49 = Guide_gravity(
+ w1 = 0.0909488, h1 = 0.06,
+ w2 = 0.0918282, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_50 = Guide_gravity(
+ w1 = 0.0918282, h1 = 0.06,
+ w2 = 0.0926569, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_51 = Guide_gravity(
+ w1 = 0.0926569, h1 = 0.06,
+ w2 = 0.0934364, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_52 = Guide_gravity(
+ w1 = 0.0934364, h1 = 0.06,
+ w2 = 0.0941677, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_53 = Guide_gravity(
+ w1 = 0.0941677, h1 = 0.06,
+ w2 = 0.0948521, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_54 = Guide_gravity(
+ w1 = 0.0948521, h1 = 0.06,
+ w2 = 0.0954906, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_55 = Guide_gravity(
+ w1 = 0.0954906, h1 = 0.06,
+ w2 = 0.096084, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_56 = Guide_gravity(
+ w1 = 0.096084, h1 = 0.06,
+ w2 = 0.0966333, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_57 = Guide_gravity(
+ w1 = 0.0966333, h1 = 0.06,
+ w2 = 0.097139, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_58 = Guide_gravity(
+ w1 = 0.097139, h1 = 0.06,
+ w2 = 0.097602, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_59 = Guide_gravity(
+ w1 = 0.097602, h1 = 0.06,
+ w2 = 0.0980229, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_60 = Guide_gravity(
+ w1 = 0.0980229, h1 = 0.06,
+ w2 = 0.0984021, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_61 = Guide_gravity(
+ w1 = 0.0984021, h1 = 0.06,
+ w2 = 0.0987401, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_62 = Guide_gravity(
+ w1 = 0.0987401, h1 = 0.06,
+ w2 = 0.0990374, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_63 = Guide_gravity(
+ w1 = 0.0990374, h1 = 0.06,
+ w2 = 0.0992944, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_64 = Guide_gravity(
+ w1 = 0.0992944, h1 = 0.06,
+ w2 = 0.0995113, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_65 = Guide_gravity(
+ w1 = 0.0995113, h1 = 0.06,
+ w2 = 0.0996884, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_66 = Guide_gravity(
+ w1 = 0.0996884, h1 = 0.06,
+ w2 = 0.0998259, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_67 = Guide_gravity(
+ w1 = 0.0998259, h1 = 0.06,
+ w2 = 0.0999241, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_68 = Guide_gravity(
+ w1 = 0.0999241, h1 = 0.06,
+ w2 = 0.0999829, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_69 = Guide_gravity(
+ w1 = 0.0999829, h1 = 0.06,
+ w2 = 0.100003, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_70 = Guide_gravity(
+ w1 = 0.100003, h1 = 0.06,
+ w2 = 0.0999829, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_71 = Guide_gravity(
+ w1 = 0.0999829, h1 = 0.06,
+ w2 = 0.0999241, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_72 = Guide_gravity(
+ w1 = 0.0999241, h1 = 0.06,
+ w2 = 0.0998259, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_73 = Guide_gravity(
+ w1 = 0.0998259, h1 = 0.06,
+ w2 = 0.0996884, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_74 = Guide_gravity(
+ w1 = 0.0996884, h1 = 0.06,
+ w2 = 0.0995113, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_75 = Guide_gravity(
+ w1 = 0.0995113, h1 = 0.06,
+ w2 = 0.0992944, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_76 = Guide_gravity(
+ w1 = 0.0992944, h1 = 0.06,
+ w2 = 0.0990374, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_77 = Guide_gravity(
+ w1 = 0.0990374, h1 = 0.06,
+ w2 = 0.0987401, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_78 = Guide_gravity(
+ w1 = 0.0987401, h1 = 0.06,
+ w2 = 0.0984021, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_79 = Guide_gravity(
+ w1 = 0.0984021, h1 = 0.06,
+ w2 = 0.0980229, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_80 = Guide_gravity(
+ w1 = 0.0980229, h1 = 0.06,
+ w2 = 0.097602, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_81 = Guide_gravity(
+ w1 = 0.097602, h1 = 0.06,
+ w2 = 0.097139, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_82 = Guide_gravity(
+ w1 = 0.097139, h1 = 0.06,
+ w2 = 0.0966333, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_83 = Guide_gravity(
+ w1 = 0.0966333, h1 = 0.06,
+ w2 = 0.096084, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_84 = Guide_gravity(
+ w1 = 0.096084, h1 = 0.06,
+ w2 = 0.0954906, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_85 = Guide_gravity(
+ w1 = 0.0954906, h1 = 0.06,
+ w2 = 0.0948521, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_86 = Guide_gravity(
+ w1 = 0.0948521, h1 = 0.06,
+ w2 = 0.0941677, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_87 = Guide_gravity(
+ w1 = 0.0941677, h1 = 0.06,
+ w2 = 0.0934364, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_88 = Guide_gravity(
+ w1 = 0.0934364, h1 = 0.06,
+ w2 = 0.0926569, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_89 = Guide_gravity(
+ w1 = 0.0926569, h1 = 0.06,
+ w2 = 0.0918282, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_90 = Guide_gravity(
+ w1 = 0.0918282, h1 = 0.06,
+ w2 = 0.0909488, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_91 = Guide_gravity(
+ w1 = 0.0909488, h1 = 0.06,
+ w2 = 0.0900173, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_92 = Guide_gravity(
+ w1 = 0.0900173, h1 = 0.06,
+ w2 = 0.0890321, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_93 = Guide_gravity(
+ w1 = 0.0890321, h1 = 0.06,
+ w2 = 0.0879913, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_94 = Guide_gravity(
+ w1 = 0.0879913, h1 = 0.06,
+ w2 = 0.0868929, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_95 = Guide_gravity(
+ w1 = 0.0868929, h1 = 0.06,
+ w2 = 0.0857347, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_96 = Guide_gravity(
+ w1 = 0.0857347, h1 = 0.06,
+ w2 = 0.0845143, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_97 = Guide_gravity(
+ w1 = 0.0845143, h1 = 0.06,
+ w2 = 0.083229, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_98 = Guide_gravity(
+ w1 = 0.083229, h1 = 0.06,
+ w2 = 0.0818756, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_99 = Guide_gravity(
+ w1 = 0.0818756, h1 = 0.06,
+ w2 = 0.0804507, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_100 = Guide_gravity(
+ w1 = 0.0804507, h1 = 0.06,
+ w2 = 0.0789505, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_101 = Guide_gravity(
+ w1 = 0.0789505, h1 = 0.06,
+ w2 = 0.0773706, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_102 = Guide_gravity(
+ w1 = 0.0773706, h1 = 0.06,
+ w2 = 0.075706, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_103 = Guide_gravity(
+ w1 = 0.075706, h1 = 0.06,
+ w2 = 0.073951, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_104 = Guide_gravity(
+ w1 = 0.073951, h1 = 0.06,
+ w2 = 0.0720989, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_105 = Guide_gravity(
+ w1 = 0.0720989, h1 = 0.06,
+ w2 = 0.0701421, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_106 = Guide_gravity(
+ w1 = 0.0701421, h1 = 0.06,
+ w2 = 0.0680716, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_107 = Guide_gravity(
+ w1 = 0.0680716, h1 = 0.06,
+ w2 = 0.0658766, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_108 = Guide_gravity(
+ w1 = 0.0658766, h1 = 0.06,
+ w2 = 0.0635442, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_109 = Guide_gravity(
+ w1 = 0.0635442, h1 = 0.06,
+ w2 = 0.0610588, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_110 = Guide_gravity(
+ w1 = 0.0610588, h1 = 0.06,
+ w2 = 0.0584007, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_111 = Guide_gravity(
+ w1 = 0.0584007, h1 = 0.06,
+ w2 = 0.0555451, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_112 = Guide_gravity(
+ w1 = 0.0555451, h1 = 0.06,
+ w2 = 0.0524599, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_113 = Guide_gravity(
+ w1 = 0.0524599, h1 = 0.06,
+ w2 = 0.0491018, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_114 = Guide_gravity(
+ w1 = 0.0491018, h1 = 0.06,
+ w2 = 0.0454102, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_115 = Guide_gravity(
+ w1 = 0.0454102, h1 = 0.06,
+ w2 = 0.0412959, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_116 = Guide_gravity(
+ w1 = 0.0412959, h1 = 0.06,
+ w2 = 0.0366165, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_117 = Guide_gravity(
+ w1 = 0.0366165, h1 = 0.06,
+ w2 = 0.0311183, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_118 = Guide_gravity(
+ w1 = 0.0311183, h1 = 0.06,
+ w2 = 0.0242506, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_119 = Guide_gravity(
+ w1 = 0.0242506, h1 = 0.06,
+ w2 = 0.0141418, h2 = 0.06,
+ l = 0.099, m = 2.5)
+AT (0,0,0.0990000000000002) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_120 = Guide_gravity(
+ w1 = 0.0141418, h1 = 0.06,
+ w2 = 0.0139648, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.09899999999998066) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_121 = Guide_gravity(
+ w1 = 0.0139648, h1 = 0.06,
+ w2 = 0.0137854, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_122 = Guide_gravity(
+ w1 = 0.0137854, h1 = 0.06,
+ w2 = 0.0136037, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_123 = Guide_gravity(
+ w1 = 0.0136037, h1 = 0.06,
+ w2 = 0.0134195, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_124 = Guide_gravity(
+ w1 = 0.0134195, h1 = 0.06,
+ w2 = 0.0132326, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_125 = Guide_gravity(
+ w1 = 0.0132326, h1 = 0.06,
+ w2 = 0.013043, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_126 = Guide_gravity(
+ w1 = 0.013043, h1 = 0.06,
+ w2 = 0.0128506, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_127 = Guide_gravity(
+ w1 = 0.0128506, h1 = 0.06,
+ w2 = 0.0126552, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_128 = Guide_gravity(
+ w1 = 0.0126552, h1 = 0.06,
+ w2 = 0.0124567, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_129 = Guide_gravity(
+ w1 = 0.0124567, h1 = 0.06,
+ w2 = 0.0122549, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_130 = Guide_gravity(
+ w1 = 0.0122549, h1 = 0.06,
+ w2 = 0.0120497, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_131 = Guide_gravity(
+ w1 = 0.0120497, h1 = 0.06,
+ w2 = 0.0118408, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_132 = Guide_gravity(
+ w1 = 0.0118408, h1 = 0.06,
+ w2 = 0.0116282, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_133 = Guide_gravity(
+ w1 = 0.0116282, h1 = 0.06,
+ w2 = 0.0114115, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_134 = Guide_gravity(
+ w1 = 0.0114115, h1 = 0.06,
+ w2 = 0.0111906, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_135 = Guide_gravity(
+ w1 = 0.0111906, h1 = 0.06,
+ w2 = 0.0109652, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_136 = Guide_gravity(
+ w1 = 0.0109652, h1 = 0.06,
+ w2 = 0.010735, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_137 = Guide_gravity(
+ w1 = 0.010735, h1 = 0.06,
+ w2 = 0.0104997, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT guide_eliced_138 = Guide_gravity(
+ w1 = 0.0104997, h1 = 0.06,
+ w2 = 0.010259, h2 = 0.06,
+ l = 0.00125625, m = 2.5)
+AT (0,0,0.0012562501562500827) RELATIVE PREVIOUS
+
+COMPONENT monitor_dxy_out = Monitor_nD(
+ xwidth = 0.01, yheight = 0.06,
+ options = "dx limits=[-10 10] bins=100 dy limits=[-10 10] bins=100")
+AT (0, 0,0.0015075001875000992) RELATIVE PREVIOUS
+
+COMPONENT monitor_nd_out = Monitor_nD(
+ xwidth = 0.01, yheight = 0.06,
+ options = "lambda limits=[0 16] bins=100")
+AT (0, 0, 0) RELATIVE PREVIOUS
+
+COMPONENT monitor_xy_out = Monitor_nD(
+ xwidth = 0.01, yheight = 0.06,
+ options = "x limits=[-0.01 0.01] bins=100 y limits=[-0.03 0.03] bins=100")
+AT (0, 0,0) RELATIVE PREVIOUS
+
+FINALLY 
+%{
+// Start of finally for generated ellpced_scripts_1
+%}
+
+END
